@@ -1,4 +1,5 @@
 argparse
+cudnn-python-wrappers
 gym
 h5py
 keras
