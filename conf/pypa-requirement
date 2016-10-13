@@ -1,0 +1,11 @@
+argparse
+gym
+matplotlib
+numpy
+Pillow
+pymongo
+qrcode
+qrtools
+requests
+sphinx
+sklearn
