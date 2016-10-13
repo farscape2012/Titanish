@@ -1,13 +1,16 @@
 argparse
 gym
+h5py
 keras
 matplotlib
 numpy
 Pillow
 pymongo
+pyyaml
 qrcode
 qrtools
 requests
 sphinx
+scipy
 sklearn
 tensorflow
