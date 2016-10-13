@@ -10,3 +10,4 @@ qrtools
 requests
 sphinx
 sklearn
+tensorflow
