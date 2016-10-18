@@ -11,7 +11,7 @@ import types
 import logging
 import signal
 
-import mongodbInterface
+import mongodb
 from datetime import datetime
 from subprocess import call
 from warnings import warn
@@ -38,7 +38,7 @@ class Server(object):
         self.batch = {}
         self.pre_batch = {}
         self.cur_batch = {}
-        self.mongo = mongodbInterface.MongoDBClient()
+        self.mongo = mongodb.MongoDBClient()
         self.mongo.db_con(host='localhost', username='admin', password='admin', port=27017, database='test',collection='table')
         #self.mongo.export2disk(filename="aaa", file_format='csv')
         self.version = '0.1'
