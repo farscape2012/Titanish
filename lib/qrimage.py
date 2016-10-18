@@ -11,7 +11,7 @@ class QRImage(qrcode.QRCode):
         self.qr.make(fit=fit)
         self.image = self.qr.make_image()
 
-    def save_image(self,filename='qr.png'):
+    def save_image(self,filename='imageQR.png'):
         self.image.save(filename)
 
     def print_qr_ascii(self):

@@ -95,3 +95,7 @@ def lcy_jsonlist2csv(data, file, consistent=False):
     """
     output = lcy_flatten_jsonlist(data)
     lcy_write_jsonlist2csv(data=output, file=file, consistent=consistent)
+
+if __name__ == "__main__":
+    data = lcy_read_jsonlist(file='/home/eijmmmp/bdcv1_mrsv1_201601014.json')
+    lcy_jsonlist2csv(data=data, file='/home/eijmmmp/bdcv1_mrsv1_201601014.csv')
