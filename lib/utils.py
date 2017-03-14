@@ -113,6 +113,12 @@ def lcy_jsonlist2csv(data, file, consistent=False):
         rtn = list(__item_generator(json_obj, key))
         return rtn
 
+def list_order(lst):
+    index = sorted(range(len(lst)), key=lambda k: lst[k])
+    return index
+
+def list_reorder(lst, index):
+    return [lst[i]  for i in index]
     
 if __name__ == "__main__":
     data = lcy_read_jsonlist(file='/home/eijmmmp/bdcv1_mrsv1_201601014.json')
