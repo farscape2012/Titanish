@@ -96,6 +96,24 @@ def lcy_jsonlist2csv(data, file, consistent=False):
     output = lcy_flatten_jsonlist(data)
     lcy_write_jsonlist2csv(data=output, file=file, consistent=consistent)
 
+    def get_json_values_recurse(self, json_obj, key):
+        self.logger.debug('key: {}'.format(key))
+        def __item_generator(json_input, lookup_key):
+            if isinstance(json_input, dict):
+                for k, v in json_input.iteritems():
+                    if k == lookup_key:
+                        yield v
+                    else:
+                        for child_val in __item_generator(v, lookup_key):
+                            yield child_val
+            elif isinstance(json_input, list):
+                for item in json_input:
+                    for item_val in __item_generator(item, lookup_key):
+                        yield item_val
+        rtn = list(__item_generator(json_obj, key))
+        return rtn
+
+    
 if __name__ == "__main__":
     data = lcy_read_jsonlist(file='/home/eijmmmp/bdcv1_mrsv1_201601014.json')
     lcy_jsonlist2csv(data=data, file='/home/eijmmmp/bdcv1_mrsv1_201601014.csv')
