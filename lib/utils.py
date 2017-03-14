@@ -4,11 +4,9 @@ import json
 def lcy_flatten_json(data, delim="__"):
     """
         Convert tree-like json/dict object into single-level dict object.
-
         Args:
             data:  a single dict/json object.
             delim: delimiter to paste keys in different-levels. Default is two underscores ("__" )
-
         Returns:
             A dict/json object
     """
@@ -25,11 +23,9 @@ def lcy_flatten_json(data, delim="__"):
 def lcy_flatten_jsonlist(data, delim="__"):
     """
         Convert a list of tree-like json/dict objects into a list of single-level dict objects.
-
         Args:
             data:  a list of dict/json objects.
             delim: delimiter to paste keys in different-levels. Default is two underscores ("__" )
-
         Returns:
             A list of single-level dict/json objects
     """
@@ -39,10 +35,8 @@ def lcy_flatten_jsonlist(data, delim="__"):
 def lcy_read_jsonlist(file):
     """
         Read json-list file. Each line is a json.
-
         Args:
             file:  a single dict/json object.
-
         Returns:
             A list of json
     """
@@ -55,13 +49,11 @@ def lcy_read_jsonlist(file):
 def lcy_write_jsonlist2csv(data, file, mode='wb', consistent=True):
     """
         write a list of json object to a file. Each dict object can have different key set.
-
         Args:
             data:   a list of json object
             file:   a file name.
             mode:   mode of open file (default 'wb')
             consistent: bool value; default is true, which means dict objects in the list have exactly the same key set.
-
         Returns:
             None
     """
@@ -84,12 +76,10 @@ def lcy_write_jsonlist2csv(data, file, mode='wb', consistent=True):
 def lcy_jsonlist2csv(data, file, consistent=False):
     """
         Convert a list of json/dict objects into a list of single-level dict objects and write to a file in a csv format.
-
         Args:
             data:   a list of json object
             file:   a file to write.
             consistent: bool value; default is true, which means dict objects in the list have exactly the same key set.
-
         Returns:
             None
     """
